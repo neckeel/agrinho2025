@@ -53,15 +53,6 @@ O **rodapé** contém uma declaração de direitos autorais clara para "Agrinho 
 
 ---
 
-### Como Rodar o Projeto
-
-Colocar este projeto em funcionamento é simples:
-
-1.  **Download:** Clone ou faça o download do repositório do projeto para o seu computador.
-2.  **Abrir:** Navegue até a pasta do projeto e abra o arquivo `index.html` no seu navegador de internet preferido.
-
----
-
 ### Contribuição e Licença
 
 #### Contribuições
