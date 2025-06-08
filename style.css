@@ -1,0 +1,426 @@
+/* Color Theme Swatches in Hex */
+/* Nova Paleta de Cores */
+:root {
+    --white: #FFFFFF; /* Adicionado: Branco puro */
+    --teal-mint-lighter: #D8FFDB; /* Teal-and-Mint-2-hex - Usado como accent */
+    --teal-mint-medium: #008F8C; /* Teal-and-Mint-3-hex */
+    --teal-mint-dark: #015958; /* Teal-and-Mint-4-hex */
+    --teal-mint-darkest: #023535; /* Teal-and-Mint-5-hex */
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--white); /* MODIFICADO: Fundo branco para o corpo */
+    color: var(--teal-mint-darkest); /* Cor padrão do texto */
+}
+
+/* --- Cabeçalho Principal --- */
+.cabecalho {
+    background-color: var(--teal-mint-darkest); /* Fundo mais escuro */
+    color: var(--white); /* MODIFICADO: Texto branco para contraste */
+    padding: 60px 20px;
+    border-bottom: 5px solid var(--teal-mint-lighter); /* Linha de destaque, usando a cor mais clara da nova paleta */
+}
+
+.cabecalho h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.cabecalho h3 {
+    color: var(--teal-mint-medium); /* Verde médio para o subtítulo */
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+/* --- Barra de Navegação (Navbar) --- */
+.navbar {
+    background-color: var(--teal-mint-dark) !important; /* Verde escuro para a navbar */
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-nav .nav-link {
+    color: var(--white) !important; /* MODIFICADO: Cor do texto dos links para branco */
+    font-weight: bold;
+    padding: 0.8rem 1.2rem;
+    transition: all 0.3s ease;
+    border-radius: 25px;
+    margin: 0 5px;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    background-color: var(--teal-mint-lighter); /* Cor de destaque ao passar o mouse ou ativo */
+    color: var(--teal-mint-darkest) !important; /* Inverte a cor do texto para contraste */
+}
+
+.navbar-toggler {
+    border-color: var(--white); /* MODIFICADO: Borda do toggler para branco */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important; /* MODIFICADO: Cor do ícone ajustada para branco */
+}
+
+/* --- Linha Divisória Abaixo da Navbar --- */
+.linha-divisoria {
+    height: 5px;
+    background-color: var(--teal-mint-lighter); /* Mesma cor de destaque */
+    width: 100%;
+}
+
+/* --- Seções de Conteúdo (Genérico) --- */
+.section-title {
+    color: var(--teal-mint-darkest);
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    border-bottom: 3px solid var(--teal-mint-medium);
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+/* Centraliza o título da seção de destaques */
+.section-title.text-center {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.text-justify {
+    text-align: justify;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: var(--teal-mint-dark);
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.rounded {
+    border-radius: 15px !important;
+}
+
+.shadow-sm {
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+}
+
+.shadow-lg {
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+}
+
+/* --- Estilos para o novo GIF/Vídeo --- */
+/* Garante que a tag <video> ou <img> seja responsiva */
+video, img[src$=".gif"], img[src$=".mp4"] { /* Seleciona video e img com src terminando em .gif ou .mp4 */
+    max-width: 100%;
+    height: auto;
+    display: block; /* Remove o espaço extra abaixo */
+}
+
+/* --- SEÇÃO DE CARDS DE DESTAQUE E NOVA ANIMAÇÃO --- */
+/* Estilos para os cards de Impacto e Benefícios */
+.card {
+    border: none; /* Remove a borda padrão do Bootstrap */
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); /* Sombra mais suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave */
+    background-color: var(--white); /* Fundo branco para o card */
+}
+
+.card:hover {
+    transform: translateY(-8px); /* Levanta o card ao passar o mouse */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Sombra mais intensa no hover */
+}
+
+.card-title {
+    font-size: 1.5rem; /* Um pouco maior para os emojis */
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.3; /* Espaçamento entre linhas para emojis */
+}
+
+.card-text {
+    color: var(--teal-mint-dark);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+
+/* --- SEÇÃO DE CARDS MAIS ANTIGA (lista-destaques) --- */
+.lista-destaques {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.destaque-item {
+    display: flex;
+    align-items: flex-start;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destaque-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.destaque-imagem-bloco {
+    width: 100px;
+    height: 100px;
+    min-width: 100px;
+    background-color: var(--teal-mint-darkest);
+    border-radius: 10px;
+    margin-right: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.destaque-conteudo {
+    flex-grow: 1;
+}
+
+.destaque-titulo {
+    color: var(--teal-mint-dark);
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.destaque-texto {
+    color: var(--teal-mint-darkest);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 0;
+    text-align: justify;
+}
+
+.destaque-botoes {
+    display: none;
+}
+
+/* --- Rodapé --- */
+.footer {
+    background-color: var(--teal-mint-darkest);
+    color: var(--white);
+    padding: 25px;
+    font-size: 0.9rem;
+    margin-top: 50px;
+}
+
+/* --- Responsividade (ajustes para telas menores) --- */
+@media (max-width: 768px) {
+    .cabecalho h1 {
+        font-size: 2.5rem;
+    }
+
+    .cabecalho h3 {
+        font-size: 1.4rem;
+    }
+
+    .section-title {
+        text-align: center;
+        display: block;
+    }
+
+    .text-justify {
+        font-size: 1rem;
+    }
+
+    /* Ajustes para a nova seção de vídeo/GIF e texto em telas menores */
+    .section.row.align-items-center.mb-5 > div {
+        flex-direction: column; /* Empilha vídeo/GIF e texto em telas menores */
+        text-align: center; /* Centraliza o texto */
+    }
+    .section.row.align-items-center.mb-5 .col-md-6 {
+        width: 100%; /* Ocupa toda a largura */
+        margin-bottom: 20px; /* Espaço entre os elementos */
+    }
+
+    /* Ajustes para os cards (Impacto e Benefícios) */
+    .card {
+        margin-bottom: 20px; /* Espaço entre os cards em telas pequenas */
+    }
+
+
+    .destaque-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+        align-items: center;
+    }
+
+    .destaque-imagem-bloco {
+        width: 80px;
+        height: 80px;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .destaque-titulo {
+        font-size: 1.3rem;
+    }
+
+    .destaque-texto {
+        font-size: 0.95rem;
+        text-align: left;
+    }
+
+    .navbar-nav .nav-link {
+        text-align: center;
+        margin: 5px 0;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .cabecalho {
+        padding: 40px 15px;
+    }
+
+    .cabecalho h1 {
+        font-size: 2rem;
+    }
+
+    .cabecalho h3 {
+        font-size: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .img-fluid {
+        margin-top: 20px;
+    }
+
+    .destaque-imagem-bloco {
+        width: 60px;
+        height: 60px;
+    }
+
+    .navbar-nav .nav-link {
+        border-radius: 15px;
+    }
+}
+.img-media {
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+/* --- Estilos para a Página de Opinião --- */
+#form-opiniao {
+    background-color: var(--teal-mint-lighter); /* Fundo claro para o formulário */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.opiniao-form .form-label {
+    font-weight: bold;
+    color: var(--teal-mint-darkest);
+    margin-bottom: 8px;
+}
+
+.opiniao-form .form-control,
+.opiniao-form .form-select {
+    border-radius: 8px;
+    border: 1px solid var(--teal-mint-medium);
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: var(--teal-mint-darkest);
+}
+
+.opiniao-form .form-control:focus,
+.opiniao-form .form-select:focus {
+    border-color: var(--teal-mint-dark);
+    box-shadow: 0 0 0 0.25rem rgba(0, 89, 88, 0.25); /* Sombra de foco com cor da paleta */
+}
+
+.opiniao-form .text-muted {
+    font-size: 0.85rem;
+    color: var(--teal-mint-dark);
+}
+
+.opiniao-form .text-danger {
+    color: #dc3545; /* Vermelho padrão do Bootstrap para campos obrigatórios */
+}
+
+/* Estilo para os botões do formulário */
+.btn-opiniao {
+    background-color: var(--teal-mint-dark);
+    border-color: var(--teal-mint-dark);
+    color: var(--white);
+    font-weight: bold;
+    padding: 12px 25px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-opiniao:hover {
+    background-color: var(--teal-mint-darkest);
+    border-color: var(--teal-mint-darkest);
+    transform: translateY(-2px);
+}
+
+.btn-opiniao-limpar {
+    background-color: #6c757d; /* Cinza do Bootstrap */
+    border-color: #6c757d;
+    color: var(--white);
+    font-weight: bold;
+    padding: 12px 25px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-opiniao-limpar:hover {
+    background-color: #495057; /* Cinza mais escuro */
+    border-color: #495057;
+    transform: translateY(-2px);
+}
+
+/* Estilo para o botão "Voltar para a Página Inicial" */
+.btn-voltar-home {
+    border-color: var(--teal-mint-dark);
+    color: var(--teal-mint-dark);
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-voltar-home:hover {
+    background-color: var(--teal-mint-dark);
+    color: var(--white);
+}
+
+/* Ajustes de responsividade para o formulário */
+@media (max-width: 768px) {
+    #form-opiniao {
+        padding: 20px;
+    }
+
+    .opiniao-form .form-control,
+    .opiniao-form .form-select,
+    .btn-opiniao,
+    .btn-opiniao-limpar {
+        font-size: 0.95rem;
+        padding: 10px 20px;
+    }
+}

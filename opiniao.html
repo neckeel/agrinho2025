@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrinho 2025 - Sua Opinião</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="cabecalho text-center py-5">
+        <h1 class="display-4">AGRINHO 2025</h1>
+        <h3 class="lead">Festejando Conexão Campo Cidade</h3>
+    </header>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Página Inicial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="animais-agropecuaria.html">Animais na Agropecuária</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="agua-zona-rural.html">Água na Zona Rural</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="protecao-animais-rural.html">Proteção aos Animais na Zona Rural</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="opiniao.html">Sua Opinião</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="linha-divisoria"></div>
+
+    <main class="container my-5">
+        <h2 class="section-title text-center mb-4">Sua Opinião é Importante !</h2>
+
+        <section id="form-opiniao" class="mb-5 p-4 rounded shadow-lg">
+            <p class="text-center lead"> Deixe sua sugestão, crítica ou elogio sobre o Agrinho 2025 ou sobre os temas abordados em nosso site.</p>
+
+            <form action="#" method="POST" class="opiniao-form">
+                <div class="mb-3">
+                    <label for="nome" class="form-label">Seu Nome: <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Seu nome completo" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="tipoFeedback" class="form-label">Tipo de Feedback:</label>
+                    <select class="form-select" id="tipoFeedback" name="tipoFeedback">
+                        <option value="sugestao">Sugestão</option>
+                        <option value="elogio">Elogio</option>
+                        <option value="critica">Crítica</option>
+                        <option value="duvida">Dúvida</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="mensagem" class="form-label">Sua Mensagem: <span class="text-danger">*</span></label>
+                    <textarea class="form-control" id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
+                </div>
+
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-primary btn-opiniao">Enviar Opinião</button>
+                    <button type="reset" class="btn btn-secondary btn-opiniao-limpar">Limpar Formulário</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="text-center mt-5">
+            <a href="index.html" class="btn btn-outline-success mt-3 btn-voltar-home">Voltar para a Página Inicial</a>
+        </section>
+
+    </main>
+
+    <footer class="footer py-3 text-center">
+        <p class="mb-0">Todos os direitos reservados para Agrinho 2025 - Festejando a Conexão Campo Cidade.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
